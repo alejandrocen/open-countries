@@ -50,6 +50,7 @@ GEM
     rack-accept (0.4.5)
       rack (>= 0.4)
     rainbow (3.0.0)
+    rake (13.0.3)
     regexp_parser (2.1.1)
     rexml (3.2.5)
     rubocop (1.16.1)
@@ -76,6 +77,7 @@ PLATFORMS
 DEPENDENCIES
   byebug (~> 11.1)
   grape (~> 1.5)
+  rake (~> 13.0)
   rubocop (~> 1.16)
 
 RUBY VERSION

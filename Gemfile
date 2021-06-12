@@ -10,4 +10,5 @@ gem 'grape', '~> 1.5'
 
 group :development do
   gem 'byebug', '~> 11.1'
+  gem 'rubocop', '~> 1.16'
 end

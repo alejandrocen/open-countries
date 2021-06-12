@@ -1,0 +1,17 @@
+name: open-countries CI
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main, develop]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build docker
+        run: docker build . -t open-countries:latest
+      - name: Linter
+        run: docker run open-countries:latest rake rubocop

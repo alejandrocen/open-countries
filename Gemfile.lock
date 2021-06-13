@@ -49,6 +49,8 @@ GEM
     rack (2.2.3)
     rack-accept (0.4.5)
       rack (>= 0.4)
+    rack-test (1.1.0)
+      rack (>= 1.0, < 3)
     rainbow (3.0.0)
     rake (13.0.3)
     regexp_parser (2.1.1)
@@ -77,6 +79,8 @@ PLATFORMS
 DEPENDENCIES
   byebug (~> 11.1)
   grape (~> 1.5)
+  minitest (~> 5.14)
+  rack-test (~> 1.1)
   rake (~> 13.0)
   rubocop (~> 1.16)
 

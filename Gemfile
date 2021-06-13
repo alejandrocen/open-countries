@@ -13,3 +13,8 @@ group :development do
   gem 'byebug', '~> 11.1'
   gem 'rubocop', '~> 1.16'
 end
+
+group :test do
+  gem 'minitest', '~> 5.14'
+  gem 'rack-test', '~> 1.1'
+end

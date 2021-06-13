@@ -4,7 +4,9 @@ require_relative 'boot'
 
 Bundler.require(:default, ENV['RACK_ENV'])
 
-require_relative '../api/core'
+Mongoid.load!('config/mongoid.yml')
+
+require_relative '../app/core'
 
 module API
   class Application < Grape::API

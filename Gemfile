@@ -10,11 +10,14 @@ gem 'grape', '~> 1.5'
 gem 'rake', '~> 13.0'
 
 group :development do
-  gem 'byebug', '~> 11.1'
   gem 'rubocop', '~> 1.16'
 end
 
 group :test do
   gem 'minitest', '~> 5.14'
   gem 'rack-test', '~> 1.1'
+end
+
+group :development, :test do
+  gem 'byebug', '~> 11.1'
 end

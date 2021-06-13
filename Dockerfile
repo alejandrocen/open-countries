@@ -6,6 +6,7 @@ WORKDIR /app
 
 COPY api/ api/
 COPY config/ config/
+COPY test/ test/
 COPY Gemfile .
 COPY Rakefile .
 COPY .rubocop.yml .

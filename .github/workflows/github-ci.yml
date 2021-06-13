@@ -13,5 +13,7 @@ jobs:
       - uses: actions/checkout@v2
       - name: Build docker
         run: docker build . -t open-countries:latest
+      - name: Tests
+        run: docker run open-countries:latest rake test
       - name: Linter
         run: docker run open-countries:latest rake rubocop

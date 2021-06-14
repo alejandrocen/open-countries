@@ -7,6 +7,6 @@ class APICountriesTest < APITest
     create_list(:country, 4)
     get '/api/countries'
 
-    assert_equal(last_response.status, 200)
+    assert_equal(JSON.parse(last_response.body).count, 4)
   end
 end

@@ -38,6 +38,8 @@ GEM
       dry-logic (~> 1.0, >= 1.0.2)
     factory_bot (6.2.0)
       activesupport (>= 5.0.0)
+    faker (2.18.0)
+      i18n (>= 1.6, < 2)
     grape (1.5.3)
       activesupport
       builder
@@ -94,6 +96,7 @@ DEPENDENCIES
   byebug (~> 11.1)
   database_cleaner-mongoid (~> 2.0)
   factory_bot (~> 6.2)
+  faker (~> 2.18)
   grape (~> 1.5)
   minitest (~> 5.14)
   mongoid (~> 7.3)

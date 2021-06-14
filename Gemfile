@@ -17,6 +17,7 @@ end
 group :test do
   gem 'database_cleaner-mongoid', '~> 2.0'
   gem 'factory_bot', '~> 6.2'
+  gem 'faker', '~> 2.18'
   gem 'minitest', '~> 5.14'
   gem 'rack-test', '~> 1.1'
 end

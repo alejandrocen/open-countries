@@ -1,12 +1,12 @@
 development:
   clients:
     default:
-      database: open_countries_development
-      hosts:
-        - localhost:27017
+      uri: mongodb://localhost:27017/open_countries_development
+      options:
+        server_selection_timeout: 5
 test:
   clients:
     default:
-      database: open_countries_test
-      hosts:
-        - localhost:27017
+      uri: <%= ENV.fetch('MONGO_HOST', 'mongodb://localhost:27017/open_countries_test') %>
+      options:
+        server_selection_timeout: 5

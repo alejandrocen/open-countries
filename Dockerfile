@@ -1,15 +1,10 @@
-FROM ruby:2.7.3-alpine
+FROM ruby:2.7.3
 
-RUN apk update && apk add --virtual build-deps build-base
+RUN apt-get clean && apt-get update -qq
 
+RUN mkdir /app
 WORKDIR /app
 
-COPY api/ api/
-COPY config/ config/
-COPY test/ test/
-COPY Gemfile .
-COPY Rakefile .
-COPY .rubocop.yml .
-COPY .rubocop_todo.yml .
+COPY . /app
 
 RUN bundle install

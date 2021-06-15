@@ -1,4 +1,4 @@
-name: open-countries CI
+name: open-countries
 
 on:
   push:

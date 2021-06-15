@@ -3,7 +3,6 @@
 require_relative 'boot'
 
 Bundler.require(:default, ENV['RACK_ENV'])
-
 Mongoid.load!('config/mongoid.yml')
 
 require_relative '../app/core'

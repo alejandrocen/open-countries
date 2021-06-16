@@ -46,9 +46,14 @@ Start command line:
 ruby bin/console
 ```
 
-Usage:
+Import countries information:
 
 ```ruby
-# Get a count of persisted documents.
+CountryImporter.run!
+```
+
+Get a count of persisted documents:
+
+```ruby
 Country.count
 ```

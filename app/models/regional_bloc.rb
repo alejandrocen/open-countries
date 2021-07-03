@@ -2,6 +2,7 @@
 
 class RegionalBloc
   include Mongoid::Document
+  include Mongoid::Timestamps
 
   field :acronym, type: String
   field :name, type: String

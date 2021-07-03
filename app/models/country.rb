@@ -2,6 +2,7 @@
 
 class Country
   include Mongoid::Document
+  include Mongoid::Timestamps
 
   field :name, type: String
   field :domains, type: Array, default: []
@@ -24,7 +25,7 @@ class Country
   field :translations, type: Hash, default: {}
   field :cioc, type: String
 
-  embeds_many :currencies
-  embeds_many :languages
-  embeds_many :regional_blocs
+  embeds_many :currencies, cascade_callbacks: true
+  embeds_many :languages, cascade_callbacks: true
+  embeds_many :regional_blocs, cascade_callbacks: true
 end

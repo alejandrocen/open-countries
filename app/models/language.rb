@@ -2,6 +2,7 @@
 
 class Language
   include Mongoid::Document
+  include Mongoid::Timestamps
 
   field :iso639_code1, type: String
   field :iso639_code2, type: String

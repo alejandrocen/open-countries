@@ -7,6 +7,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.7.3'
 
 gem 'grape', '~> 1.5'
+gem 'grape-entity', '~> 0.9.0'
 gem 'mongoid', '~> 7.3'
 gem 'rake', '~> 13.0'
 

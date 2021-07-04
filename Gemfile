@@ -10,6 +10,7 @@ gem 'grape', '~> 1.5'
 gem 'grape-entity', '~> 0.9.0'
 gem 'mongoid', '~> 7.3'
 gem 'rake', '~> 13.0'
+gem 'zeitwerk', '~> 2.4'
 
 group :development do
   gem 'rubocop', '~> 1.16'

@@ -24,7 +24,7 @@ bundle install
 Start the web server:
 
 ```sh
-rackup
+rackup -p 8080
 ```
 
 Run all tests:

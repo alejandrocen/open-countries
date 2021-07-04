@@ -11,6 +11,16 @@ module API
         countries = Country.limit(params[:limit]).offset(params[:offset])
         { data: CountryEntity.represent(countries) }
       end
+
+      params do
+        requires :id, type: String
+      end
+      route_param :id do
+        get do
+          country = Country.find(params[:id])
+          { data: CountryEntity.represent(country) }
+        end
+      end
     end
   end
 end

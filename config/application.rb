@@ -11,7 +11,7 @@ module API
   class Application < Grape::API
     format :json
     prefix :api
-    helpers ErrorHandler
+    helpers ErrorHandler, RenderHelper
     rescue_from Grape::Exceptions::ValidationErrors, with: ->(e) { validation_error!(e) }
     rescue_from Mongoid::Errors::DocumentNotFound, with: :not_found!
     rescue_from :all, with: :server_error!

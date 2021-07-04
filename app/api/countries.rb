@@ -9,7 +9,7 @@ module API
       end
       get do
         countries = Country.limit(params[:limit]).offset(params[:offset])
-        { data: CountryEntity.represent(countries) }
+        render json: CountryEntity.represent(countries)
       end
 
       params do
@@ -18,7 +18,7 @@ module API
       route_param :id do
         get do
           country = Country.find(params[:id])
-          { data: CountryEntity.represent(country) }
+          render json: CountryEntity.represent(country)
         end
       end
     end

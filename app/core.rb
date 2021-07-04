@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require_relative '../lib/api_helper'
+require_relative '../lib/render_helper'
 require_relative '../lib/error_handler'
 require_relative 'models/country'
 require_relative 'models/currency'

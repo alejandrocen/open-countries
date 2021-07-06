@@ -24,20 +24,41 @@ bundle install
 Start the web server:
 
 ```sh
-rackup -p 8080
+rackup -p 9292
 ```
 
-Run all tests:
+### Rake tasks
+
+Show tasks:
 
 ```sh
-rake test
+bundle exec rake -T
+```
+
+Import countries information:
+
+```sh
+bundle exec rake countries:import
+```
+
+Show routes:
+
+```sh
+bundle exec rake routes
 ```
 
 Run the linter:
 
 ```sh
-rake rubocop
+bundle exec rake rubocop
 ```
+
+Run all tests:
+
+```sh
+bundle exec rake test
+```
+
 ### Command line
 
 Start command line:
@@ -46,13 +67,7 @@ Start command line:
 ruby bin/console
 ```
 
-Import countries information:
-
-```ruby
-CountryImporter.run!
-```
-
-Get a count of persisted documents:
+Returns the total count of all countries:
 
 ```ruby
 Country.count

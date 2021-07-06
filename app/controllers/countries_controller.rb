@@ -2,6 +2,7 @@
 
 class CountriesController < Grape::API
   helpers CountryRepository
+  mount Countries::AllController
 
   resource :countries do
     params do

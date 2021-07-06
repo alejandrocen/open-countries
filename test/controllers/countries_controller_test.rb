@@ -2,13 +2,13 @@
 
 require_relative '../test_helper'
 
-class APICountriesTest < APITest
-  def test_get_countries
-    create_list(:country, 4)
-    get '/api/countries'
+class CountriesControllerTest < ControllerTest
+  def test_get_countries_with_pagination
+    create_list(:country, 10)
+    get '/api/countries', limit: 5
     countries = JSON.parse(last_response.body).dig('data', 'countries')
 
-    assert_equal(countries.count, 4)
+    assert_equal(countries.count, 5)
   end
 
   def test_get_country

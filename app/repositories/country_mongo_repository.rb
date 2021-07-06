@@ -11,4 +11,8 @@ class CountryMongoRepository
       .offset(query.offset)
       .limit(query.limit)
   end
+
+  def all
+    Country.all
+  end
 end

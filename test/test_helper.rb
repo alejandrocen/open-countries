@@ -7,7 +7,7 @@ require 'minitest/autorun'
 
 FactoryBot.find_definitions
 
-class APITest < Minitest::Test
+class ControllerTest < Minitest::Test
   include Rack::Test::Methods
   include FactoryBot::Syntax::Methods
 

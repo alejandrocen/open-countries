@@ -9,6 +9,7 @@ class CountriesController < Grape::API
       optional :filter, type: Hash, default: {}
       optional :limit, type: Integer, default: 20
       optional :offset, type: Integer, default: 0
+      optional :sort, type: String, default: 'alpha2_code'
     end
     get do
       query_builder = Query::MongoBuilder.new(params: params)

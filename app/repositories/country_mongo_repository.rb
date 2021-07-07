@@ -13,7 +13,7 @@ class CountryMongoRepository
       .limit(query.limit)
   end
 
-  def all
-    Country.all
+  def all(query)
+    Country.order(query.order)
   end
 end

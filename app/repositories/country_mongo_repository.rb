@@ -8,6 +8,7 @@ class CountryMongoRepository
   def search(query)
     Country
       .where(query.criteria)
+      .order(query.order)
       .offset(query.offset)
       .limit(query.limit)
   end

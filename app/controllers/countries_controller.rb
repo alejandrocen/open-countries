@@ -16,7 +16,7 @@ class CountriesController < Grape::API
     end
 
     params do
-      use :show, :fields
+      use :id, :fields
     end
     route_param :id do
       get do

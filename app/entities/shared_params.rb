@@ -20,7 +20,7 @@ module SharedParams
     optional :fields, type: String, default: options[:default_fields]
   end
 
-  params :show do
+  params :id do
     requires :id, type: String
   end
 end

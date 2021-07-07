@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class CountriesController < Grape::API
+class CountriesController < ApiController
   helpers CountryRepository, SharedParams
   mount Countries::AllController
 

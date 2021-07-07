@@ -4,7 +4,7 @@ require_relative 'boot'
 require_relative 'setup'
 
 module API
-  class Application < Grape::API
+  class Application < ApiController
     format :json
     prefix :api
     helpers ErrorHandler, Renderer

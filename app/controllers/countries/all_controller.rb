@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module Countries
-  class AllController < Grape::API
+  class AllController < ApiController
     helpers CountryRepository, SharedParams
 
     resource :countries do

@@ -17,8 +17,8 @@ module Query
 
     def order
       sort_array.each_with_object({}) do |sort, order|
-        sorter = Sort.new(sort)
-        order[sorter.key] = sorter.direction
+        sort = Sort.new(sort)
+        order[sort.key] = sort.direction
       end
     end
 

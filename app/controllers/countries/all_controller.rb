@@ -12,7 +12,7 @@ module Countries
       get :all do
         query_builder = Query::MongoBuilder.from_params(params)
         countries = repository.all(query_builder)
-        render json: CountryEntity.represent(countries, only: Fields.symbolize(params[:fields]))
+        render countries, with: CountryEntity, fields: params[:fields]
       end
     end
   end

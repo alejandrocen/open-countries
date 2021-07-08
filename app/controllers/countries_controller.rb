@@ -12,7 +12,7 @@ class CountriesController < ApiController
     get do
       query_builder = Query::MongoBuilder.from_params(params)
       countries = repository.search(query_builder)
-      render json: CountryEntity.represent(countries, only: Fields.symbolize(params[:fields]))
+      render countries, with: CountryEntity, fields: params[:fields]
     end
 
     params do
@@ -21,7 +21,7 @@ class CountriesController < ApiController
     route_param :id do
       get do
         country = repository.find(params[:id])
-        render json: CountryEntity.represent(country, only: Fields.symbolize(params[:fields]))
+        render country, with: CountryEntity, fields: params[:fields]
       end
     end
   end

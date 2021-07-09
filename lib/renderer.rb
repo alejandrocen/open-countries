@@ -2,10 +2,10 @@
 
 module Renderer
   def render(objects, options = {})
-    raise ArgumentError, 'The "with" argument is required.' unless options.key?(:with)
+    raise ArgumentError, 'Argument "with" is required.' unless options.key?(:with)
 
-    entity = options[:with]
     meta = options[:meta]
+    entity = options[:with]
     fields = Fields.symbolize(options[:fields])
 
     { data: entity.represent(objects, only: fields) }.tap do |response|

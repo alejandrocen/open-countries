@@ -9,6 +9,8 @@ ruby '2.7.3'
 gem 'grape', '~> 1.5'
 gem 'grape-entity', '~> 0.9.0'
 gem 'mongoid', '~> 7.3'
+gem 'rack-contrib', '~> 2.3'
+gem 'rack-cors', '~> 1.1'
 gem 'rake', '~> 13.0'
 gem 'zeitwerk', '~> 2.4'
 

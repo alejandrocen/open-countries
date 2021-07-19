@@ -13,7 +13,7 @@ module SharedParams
   end
 
   params :filter do |options|
-    optional :filter, type: Hash, default: options[:default_filter] || {}
+    optional :q, type: String, default: options[:default_filter]
   end
 
   params :fields do |options|

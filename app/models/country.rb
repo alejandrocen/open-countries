@@ -3,6 +3,7 @@
 class Country
   include Mongoid::Document
   include Mongoid::Timestamps
+  include Mongoid::Search
 
   field :name, type: String
   field :domains, type: Array, default: []
@@ -28,4 +29,6 @@ class Country
   embeds_many :currencies, cascade_callbacks: true
   embeds_many :languages, cascade_callbacks: true
   embeds_many :regional_blocs, cascade_callbacks: true
+
+  search_in :name, :alpha2_code
 end

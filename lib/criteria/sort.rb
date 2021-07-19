@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Query
+module Criteria
   class Sort
     attr_accessor :sort
 

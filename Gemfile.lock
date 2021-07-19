@@ -40,6 +40,7 @@ GEM
       activesupport (>= 5.0.0)
     faker (2.18.0)
       i18n (>= 1.6, < 2)
+    fast-stemmer (1.0.2)
     grape (1.5.3)
       activesupport
       builder
@@ -58,6 +59,9 @@ GEM
     mongoid (7.3.0)
       activemodel (>= 5.1, < 6.2)
       mongo (>= 2.10.5, < 3.0.0)
+    mongoid_search (0.4.0)
+      fast-stemmer (~> 1.0.0)
+      mongoid (>= 5.0.0)
     multi_json (1.15.0)
     mustermann (1.1.1)
       ruby2_keywords (~> 0.0.1)
@@ -109,6 +113,7 @@ DEPENDENCIES
   grape-entity (~> 0.9.0)
   minitest (~> 5.14)
   mongoid (~> 7.3)
+  mongoid_search (~> 0.4.0)
   rack-contrib (~> 2.3)
   rack-cors (~> 1.1)
   rack-test (~> 1.1)

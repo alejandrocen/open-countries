@@ -10,8 +10,8 @@ module Countries
         use :sort, default_sort: 'alpha2_code'
       end
       get :all do
-        query_builder = Query::MongoBuilder.from_params(params)
-        countries = repository.all(query_builder)
+        criteria_builder = Criteria::MongoBuilder.from_params(params)
+        countries = repository.all(criteria_builder)
         render countries, with: CountryEntity, fields: params[:fields]
       end
     end

@@ -7,6 +7,7 @@ class CountryMongoRepository
 
   def search(criteria_builder)
     Country
+      .full_text_search(criteria_builder.query)
       .order(criteria_builder.order)
       .offset(criteria_builder.offset)
       .limit(criteria_builder.limit)

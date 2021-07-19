@@ -20,6 +20,16 @@ class CountriesControllerTest < ControllerTest
     assert_equal(Country.order(alpha2_code: :desc).pluck(:alpha2_code), alpha2_codes)
   end
 
+  def test_get_countries_with_query
+    create(:country, name: 'Mexico', alpha2_code: 'MX')
+    create(:country, name: 'Argentina', alpha2_code: 'AR')
+
+    get '/api/countries', fields: 'name,alpha2_code', q: 'MX'
+    countries = JSON.parse(last_response.body).dig('data', 'countries')
+
+    assert_equal(countries.pluck('name', 'alpha2_code').to_h, { 'Mexico' => 'MX' })
+  end
+
   def test_get_country
     country_id = create(:country).id
     get "/api/countries/#{country_id}", fields: 'alpha2_code,currencies'

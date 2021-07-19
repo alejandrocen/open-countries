@@ -10,8 +10,8 @@ class CountriesController < ApiController
       use :sort, default_sort: 'alpha2_code'
     end
     get do
-      query_builder = Query::MongoBuilder.from_params(params)
-      countries = repository.search(query_builder)
+      criteria_builder = Criteria::MongoBuilder.from_params(params)
+      countries = repository.search(criteria_builder)
       render countries, with: CountryEntity, fields: params[:fields]
     end
 

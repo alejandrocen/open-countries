@@ -5,7 +5,7 @@ require_relative '../test_helper'
 class CountriesControllerTest < ControllerTest
   def test_get_countries_with_pagination
     create_list(:country, 10)
-    get '/api/countries', limit: 5, fields: 'name'
+    get '/api/countries', offset: 0, limit: 5
     countries = JSON.parse(last_response.body).dig('data', 'countries')
 
     assert_equal(countries.count, 5)

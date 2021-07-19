@@ -5,15 +5,14 @@ class CountryMongoRepository
     Country.find(id)
   end
 
-  def search(query)
+  def search(criteria_builder)
     Country
-      .where(query.criteria)
-      .order(query.order)
-      .offset(query.offset)
-      .limit(query.limit)
+      .order(criteria_builder.order)
+      .offset(criteria_builder.offset)
+      .limit(criteria_builder.limit)
   end
 
-  def all(query)
-    Country.order(query.order)
+  def all(criteria_builder)
+    Country.order(criteria_builder.order)
   end
 end

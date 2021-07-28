@@ -4,9 +4,9 @@
 
 OpenCountries provide countries information via a REST API.
 
-## Documentation
+## Links
 
-...
+* [Documentation](https://alejandrocen.github.io/open-countries/)
 
 ## Requirements
 

@@ -7,6 +7,12 @@ development:
 test:
   clients:
     default:
-      uri: <%= ENV.fetch('MONGO_HOST', 'mongodb://localhost:27017/open_countries_test') %>
+      uri: <%= ENV.fetch('DATABASE_HOST', 'mongodb://localhost:27017/open_countries_test') %>
+      options:
+        server_selection_timeout: 5
+production:
+  clients:
+    default:
+      uri: <%= ENV.fetch('DATABASE_HOST', 'mongodb://localhost:27017/open_countries_production') %>
       options:
         server_selection_timeout: 5

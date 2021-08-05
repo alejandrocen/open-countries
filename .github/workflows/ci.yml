@@ -14,6 +14,6 @@ jobs:
       - name: Build docker
         run: docker build . -t open-countries:latest
       - name: Tests
-        run: docker run -e MONGO_HOST=${{ secrets.MONGO_HOST }} open-countries:latest bundle exec rake test
+        run: docker run -e DATABASE_HOST=${{ secrets.DATABASE_HOST }} open-countries:latest bundle exec rake test
       - name: Linter
         run: docker run open-countries:latest bundle exec rake rubocop

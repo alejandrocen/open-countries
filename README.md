@@ -6,6 +6,7 @@ OpenCountries provide countries information via a REST API.
 
 ## Links
 
+* [API](https://open-countries-api.herokuapp.com)
 * [Documentation](https://alejandrocen.github.io/open-countries/)
 
 ## Requirements
